@@ -1,0 +1,6 @@
+entrada2 = float(input("Dinero a ingresar en Libras: "))
+salida = round(entrada2*1.18)
+colom = round(entrada2*5308)
+print("-> El equivalente en Euros es: {}".format(salida)
+      + " Euros y a {}".format(colom)
+      + " pesos colombianos")
