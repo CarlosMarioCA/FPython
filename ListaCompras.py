@@ -27,8 +27,8 @@ while(i < len(inventario)):
     i+=1
 
 if len(carrito)>=1:
-    print("Se compró lo siguiente: {}".format(carrito))
-    print("Gracias por su compra.")
+        print("Se compró lo siguiente: {}".format(carrito))
+        print("Gracias por su compra.")
 else:
     print("Vuelva pronto.")
 
