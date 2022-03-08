@@ -42,5 +42,6 @@ while vida_quilava > 0 and vida_dwg > 0:
 
 if vida_quilava <= 0:
     print("Gano Dewgong.")
+
 elif vida_dwg <= 0:
     print("Gano Quilava.")
