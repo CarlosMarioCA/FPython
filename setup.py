@@ -2,6 +2,7 @@ from distutils.core import setup
 import py2exe
 import os
 import re
+import shutil
 from pathlib import Path
 from time import sleep
 from random import randrange

